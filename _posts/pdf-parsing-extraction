@@ -1,0 +1,7 @@
+`sudo apt install poppler-utils`
+
+`filename=”” ; pdftotext ${filename}.pdf ${filename}.txt`
+
+`lesspipe` 
+
+`pandoc`
