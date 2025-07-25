@@ -1,0 +1,10 @@
+[command line - Oh My Zsh - Disable 'Would you like to check for updates' prompt - Stack Overflow](https://stackoverflow.com/questions/11378607/oh-my-zsh-disable-would-you-like-to-check-for-updates-prompt)
+
+- details
+    - [command line - Oh My Zsh - Disable 'Would you like to check for updates' prompt - Stack Overflow](https://stackoverflow.com/questions/11378607/oh-my-zsh-disable-would-you-like-to-check-for-updates-prompt)
+        
+        Set environment variable `DISABLE_UPDATE_PROMPT=true` to always reply **Yes** and automatically upgrade.
+        
+        Set environment variable `DISABLE_AUTO_UPDATE=true` to always reply **No** and never upgrade.
+        
+        Simply add one of these in your `~/.zshrc` somewhere before calling `source $ZSH/oh-my-zsh.sh`.
