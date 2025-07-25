@@ -27,7 +27,8 @@ When it comes to honing your development skills, there are numerous tools availa
 
 - tools for creation
     
-    **nativefier** ⇒ to build electron app from web ⇒⇒ très intéressant
+   a. **nativefier** ⇒ to build electron app from web ⇒⇒ très intéressant
+   b. **ratatui** ⇒ rich tui apps in rust
 
 
 
