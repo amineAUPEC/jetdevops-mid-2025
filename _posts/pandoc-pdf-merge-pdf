@@ -1,0 +1,61 @@
+
+- infos
+- pandoc pdf :  Merging PDF or pdftk
+
+
+
+- merged pdf with pdftk
+    
+    The usual tool is `pdftk`. This command will take `first.pdf` and `second.pdf`, and create a new `merged.pdf` which is the con`cat`enation of the two source files:
+    
+    ```
+    pdftk first.pdf second.pdf cat output merged.pdf
+    ```
+    
+    Pandoc is primarily a document conversion tool and does not have built-in functionality to merge PDF files. However, you can use other tools like `pdfunite` or `pdftk` to merge PDF files together. Here's an example using `pdfunite`:
+    
+    ```bash
+    pdfunite file1.pdf file2.pdf merged.pdf
+    
+    ```
+    
+- merging with PyPDF2
+    
+    ```python
+    import PyPDF2
+    
+    merged_pdf_path = "./gen/merged.pdf"
+    pdf_paths = ["path/to/file1.pdf", "path/to/file2.pdf"]
+    
+    merged_pdf = PyPDF2.PdfFileMerger()
+    
+    for pdf_path in pdf_paths:
+        with open(pdf_path, "rb") as pdf_file:
+            merged_pdf.append(pdf_file)
+    
+    merged_pdf.write(merged_pdf_path)
+    merged_pdf.close()
+    
+    ```
+    
+    ```python
+    import PyPDF2
+    import glob
+    
+    pdf_paths = glob.glob("./*.pdf")
+    
+    # for pdf_file in pdf_files:
+    #    print(pdf_file)
+    
+    merged_pdf_path = "./gen/merged.pdf"
+    
+    merged_pdf = PyPDF2.PdfFileMerger()
+    
+    for pdf_path in pdf_paths:
+        with open(pdf_path, "rb") as pdf_file:
+            merged_pdf.append(pdf_file)
+    
+    merged_pdf.write(merged_pdf_path)
+    merged_pdf.close()
+    
+    ```
